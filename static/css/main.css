@@ -1,29 +1,21 @@
 body{
     margin:0;
-    font-family: sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(255, 255, 255);
 }
 
 .content {
     margin: 0 auto;
-    width: 400px;
+    margin-top: 20px;
+    width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 1px rgb(161, 161, 161);
+    background-color:white;
 }
 
-table, td, th {
-    border: 1px solid #aaa;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th {
-    height: 30px;
-}
-
-td {
-    text-align: center;
-    padding: 5px;
+th,td{
+    width: 500px;
 }
 
 .form {
@@ -32,4 +24,5 @@ td {
 
 #content {
     width: 70%;
+    padding:10px;
 }

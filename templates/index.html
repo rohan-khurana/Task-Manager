@@ -8,9 +8,9 @@
 <div class="content">
     <h1 style="text-align:center;"> Task Master</h1>
     {% if tasks|length < 1 %}
-    <h4>There are no tasks. Create One below!</h4>
+    <h5 style="text-align:center;">There are no tasks. Create One below!</h5>
     {% else %}
-    <table>
+    <table class="table-striped" style="text-align: center;">
         <tr>
             <th>Task</th>
             <th>Added</th>
@@ -21,19 +21,20 @@
 
         <tr>
             <td>{{task.content}}</td>
-            <td>{{task.date_created.Date}}</td>
+            <td>{{task.date_created.date()}}</td>
             <td>
-                <a href="/delete/{{task.id}}">Delete</a>
-                <br>
-                <a href="/update/{{task.id}}">Update</a>
+                <a class="btn btn-danger rounded-circle" style="margin: 2px;" href="/delete/{{task.id}}"><i class="fas fa-trash-alt"></i></a>
+                <a class="btn btn-secondary rounded-circle" style="margin: 2px;" href="/update/{{task.id}}"><i class="fas fa-edit"></i></a>
             </td>
         </tr>
         {% endfor %}
     </table>
     {% endif %}
+    <br>
     <form action="/" method="POST">
-        <input type="text" name="content">
-        <input type="submit" name="" value="Add Task">
+        <input class="form-control" placeholder="Enter Your task" type="text" name="content">
+        <br>
+        <input class="btn btn-dark" type="submit" name="" value="Add Task">
     </form>
 
 </div>
